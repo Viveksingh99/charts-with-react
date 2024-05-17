@@ -1,5 +1,5 @@
 "use client";
-import { BarChart, Bar, ResponsiveContainer } from "recharts";
+import { BarChart, Bar } from "recharts";
 
 const data = [
   {
@@ -49,7 +49,6 @@ const data = [
 export default function Charts() {
   return (
     <div>
-      <h1 className="text-center text-red-700">Show Charts</h1>
       {/* <ResponsiveContainer width="100%" height="100%"> */}
       <BarChart width={1000} height={500} data={data}>
         <Bar dataKey="uv" fill="#8884d8" />
