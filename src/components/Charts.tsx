@@ -1,5 +1,13 @@
 "use client";
-import { BarChart, Bar, YAxis, XAxis, Tooltip, Legend } from "recharts";
+import {
+  BarChart,
+  Bar,
+  YAxis,
+  XAxis,
+  Tooltip,
+  Legend,
+  ResponsiveContainer,
+} from "recharts";
 
 const data = [
   {
@@ -48,16 +56,18 @@ const data = [
 
 export default function Charts() {
   return (
-    <div>
-      {/* <ResponsiveContainer width="100%" height="100%"> */}
-      <BarChart width={1000} height={500} data={data}>
-      <XAxis dataKey="name" />
-      <YAxis />
-      <Tooltip />
+    <main className="mx-auto m-24">
+      <div className="h-72 w-full">
+      <ResponsiveContainer width="100%" height="100%">
+        <BarChart width={48} height={48} data={data}>
+          <XAxis dataKey="name" />
+          <YAxis />
+          <Tooltip />
           <Legend />
-        <Bar dataKey="uv" fill="#8884d8" />
-      </BarChart>
-      {/* </ResponsiveContainer> */}
-    </div>
+          <Bar dataKey="uv" fill="#8884d8" />
+        </BarChart>
+      </ResponsiveContainer>
+      </div>
+    </main>
   );
 }
